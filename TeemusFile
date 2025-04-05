@@ -5,4 +5,11 @@ https://github.com/aku23004/Lab-2-Release-Based-Workflow-in-GitHub-Azure-Board/i
 
 # Print a greeting message
 print(f"Hello, {name}! Welcome to the world of programming.")
-print("Let's explore the endless possibilities together.")
+print("Let's explore the endless possibilities together.
+
+print("Luodaan automaatio joka tekee ilmoituksen jos laskua ei voida käsitellä") TÄMÄ
+
+print("Luo luettelo jonka pystyt lajittelemaan eri laskun osilla") NYT TÄMÄ
+
+
+Lissäää committeja
