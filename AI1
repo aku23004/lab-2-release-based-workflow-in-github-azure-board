@@ -1,1 +1,13 @@
+
 print("This line will be printed.")
+
+print("UiPath hakee hakemistossa olevat uudet PDF-laskut")
+
+print("UiPath hakee hakemistosta "LASKUT")
+
+
+##HAKEMISTO 1
+
+print("Parsitut tiedot tallennetaan CSV-tiedostoon")
+
+
