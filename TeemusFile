@@ -6,3 +6,27 @@ https://github.com/aku23004/Lab-2-Release-Based-Workflow-in-GitHub-Azure-Board/i
 # Print a greeting message
 print(f"Hello, {name}! Welcome to the world of programming.")
 print("Let's explore the endless possibilities together.")
+
+import random
+
+def guess_number():
+    # Generate a random number between 1 and 10
+    number_to_guess = random.randint(1, 10)
+    attempts = 0
+    print("Welcome to the Number Guessing Game!")
+    
+    while True:
+        # Ask the user to guess a number
+        guess = int(input("Guess a number between 1 and 10: "))
+        attempts += 1
+        
+        if guess < number_to_guess:
+            print("Too low! Try again.")
+        elif guess > number_to_guess:
+            print("Too high! Try again.")
+        else:
+            print(f"Congratulations! You've guessed the number in {attempts} attempts.")
+            break
+
+# Start the game
+guess_number()
