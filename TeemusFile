@@ -1,8 +1,3 @@
 Ostolaskuprosessi pitää analysoida
 
 https://github.com/aku23004/Lab-2-Release-Based-Workflow-in-GitHub-Azure-Board/issues/1
-
-
-# Print a greeting message
-print(f"Hello, {name}! Welcome to the world of programming.")
-print("Let's explore the endless possibilities together.")
