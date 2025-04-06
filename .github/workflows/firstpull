@@ -1,0 +1,42 @@
+name: Congratulate First-Time Pull Request Authors
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  welcome_first_pr:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+      issues: write
+    steps:
+      - name: Check if it's the user's first PR
+        id: check
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const { data: pulls } = await github.rest.pulls.list({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'all',
+              per_page: 100
+            });
+
+            const user = context.actor;
+            const userPRs = pulls.filter(pr => pr.user.login === user);
+            const isFirst = userPRs.length === 1;
+
+            core.setOutput("is_first", isFirst);
+      - name: Comment if first PR
+        if: steps.check.outputs.is_first == 'true'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: "Congratulations @${{ github.actor }} on opening your first pull request! Thank you for contributing!"
+            });
