@@ -48,4 +48,4 @@ jobs:
         app-name: 'group8lab4'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_e41306b4498b4ccd881cffa56a40f3a3 }}
-        images: 'group8lab42.azurecr.io/group8/group8image:${{ github.sha }}'
+        images: 'group8lab42.azurecr.io/${{ secrets.azureappservice_containerusername_0f7f32980814485d9c04930f75e402e9 }}/group8image:${{ github.sha }}'
