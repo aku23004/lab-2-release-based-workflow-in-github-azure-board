@@ -23,8 +23,8 @@ jobs:
       uses: docker/login-action@v2
       with:
         registry: https://group8lab42.azurecr.io/
-        username: ${{ secrets.AzureAppService_ContainerUsername_0f7f32980814485d9c04930f75e402e9 }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_d3c14df7b19443a192ad58a75508582f }}
+        username: Group8Lab42
+        password: t4079CXLc8+eyqPb7EVLxBPZ7xwTw+OVjpr/bOIWA0+ACRCktT7K
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v3
